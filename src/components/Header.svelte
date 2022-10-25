@@ -13,7 +13,7 @@
     img.logo {
       width: 80px;
       height: auto;
-      opacity: 0.5;
+      opacity: 0;
     }
   }
 </style>
