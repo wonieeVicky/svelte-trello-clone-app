@@ -61,6 +61,7 @@
     box-sizing: border-box;
   }
   .list {
+    word-break: break-all;
     display: inline-block;
     font-size: 16px;
     white-space: normal;
@@ -69,6 +70,7 @@
     box-sizing: border-box;
     margin: 0 4px;
     line-height: 20px;
+    user-select: none;
     & * {
       box-sizing: border-box;
     }
