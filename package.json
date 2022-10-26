@@ -15,6 +15,7 @@
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-strip": "^3.0.1",
     "@rollup/plugin-typescript": "^8.5.0",
     "autoprefixer": "^10.4.12",
     "crypto-random-string": "3.2",
