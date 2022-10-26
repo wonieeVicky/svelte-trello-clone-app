@@ -1,6 +1,7 @@
 import svelte from "rollup-plugin-svelte"
 import commonjs from "@rollup/plugin-commonjs"
 import alias from "@rollup/plugin-alias"
+import strip from "@rollup/plugin-strip"
 import resolve from "@rollup/plugin-node-resolve"
 import livereload from "rollup-plugin-livereload"
 import { terser } from "rollup-plugin-terser"
@@ -89,6 +90,12 @@ export default {
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
     !production && livereload("public"),
+
+    // production일 때만 실행
+    production &&
+      strip({
+        include: "**/*.(svelte|js)", // 프로젝트 모든 소스 svelte, js 파일에서 콘솔로그 코드 제거
+      }),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
